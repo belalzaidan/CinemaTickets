@@ -1,0 +1,93 @@
+table, th, td{
+    margin: 10px;
+    color: white;
+    align-items: center;
+}
+button{
+    background: rgba(117, 117, 117, 0);
+    border: 0;
+}
+.table{
+    background-color: rgba(92, 107, 113, 0.5);
+    backdrop-filter: blur(7px);
+    max-width: 850px;
+    border: 1px solid #757575;
+    border-radius: 10px;
+}
+
+body{
+    padding:10px;
+    font-family: Cambria, serif;
+    background-image: url("1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.warning{
+    color: #ff7474;
+    padding-left: 25px;
+}
+
+tr{
+    margin: 10px;
+}
+.card{
+    border-radius: 10px;
+    border: 1px solid #757575;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(92, 107, 113, 0.5);
+    color: #1D242C;
+    backdrop-filter: blur(7px);
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+.buttons button{
+    margin: 10px;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    margin: 25px;
+}
+.bt.btn-danger{
+    margin: auto;
+}
+select{
+    border-radius:5px;
+    font-size: 15px;
+    padding: 7px;
+    background-color: #1E2930;
+    color: #ffffff;
+}
+input[type="text"], input[type="number"]{
+    max-width: 200px;
+    color: #f1f1f1;
+    background-color: #1e2930;
+    border: 0;
+}
+#tickets{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border-radius: 10px;
+}
+#msg{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+#slett{
+    color: #ff2727;
+}
+#order{
+    margin: 10px;
+    border-color: #1D242C;
+}

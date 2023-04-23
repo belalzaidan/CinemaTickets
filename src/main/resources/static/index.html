@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test html</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<h1>Bestilling av kinobiletter</h1>
+
+<div class="card">
+    <table>
+        <tr> <td> Velg film her </td>
+
+            <td><select class="form-select" id="films" name="films" >
+                <option value="default">Select an option</option>
+                <option>Shutter Island</option>
+                <option>The Invisible Man</option>
+                <option>John Wick 4</option>
+                <option>Non-Stop</option>
+            </select></td>
+
+            <td id="result_films" class="warning"></td>
+        </tr>
+
+        <tr>
+            <td>Antall</td>
+            <td>
+                <input class="form-control" type="number"  id="antall" min="1" max="5" placeholder="0">
+            <td id="result_antall" class="warning"></td>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Fornavn</td>
+            <td>
+                <input class="form-control" type="text" id="fornavn" placeholder="Ronald">
+            </td>
+            <td id="result_fornavn" class="warning"></td>
+        </tr>
+
+        <tr>
+            <td>Etternavn</td>
+            <td>
+                <input class="form-control" type="text" id="etternavn" placeholder="Araujo">
+            </td>
+            <td id="result_etternavn" class="warning"></td>
+        </tr>
+
+
+        <tr>
+            <td>Telefonnr</td>
+            <td>
+                <input class="form-control" type="text" id="telefon" placeholder="400 44 004">
+            </td>
+            <td id="result_telefon" class="warning"></td>
+        </tr>
+
+        <tr>
+            <td>Epost</td>
+            <td>
+                <input class="form-control" type="text" id="email" placeholder="user@example.com">
+            </td>
+            <td id="result_email" class="warning"></td>
+        </tr>
+    </table>
+</div>
+
+<div class="buttons">
+    <button class="btn btn-primary" onclick="bilett()">Kjøp bilett</button>
+    <button class="btn btn-secondary" onclick="hentBilett(false,0)">Vis biletter</button>
+
+
+    <select class="form-select" aria-label="Default select example" id="order" onchange="hentBilett(false)">
+        <option selected>Sorter etter</option>
+        <option value="t">Eldste først</option>
+        <option value="fi">Film</option>
+        <option value="a">Antall</option>
+        <option value="fo">Fornavn</option>
+        <option value="et">Etternavn</option>
+    </select>
+</div>
+
+<div id="msg">
+</div>
+
+<div id="result">
+</div>
+</body>
+</html>
