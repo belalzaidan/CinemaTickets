@@ -10,8 +10,4 @@ public interface BilettRepository extends JpaRepository<Bilett,Long> {
     List<Bilett> findByOrderByAntall();
     List<Bilett> findByOrderByFornavn();
     List<Bilett> findByOrderByEtternavn();
-    List<Bilett> findByOrderByTelefon();
-    List<Bilett> findByOrderByEpost();
-
-
 }

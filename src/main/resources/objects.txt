@@ -1,5 +1,4 @@
 INSERT INTO Biletter (id, film, antall, fornavn, etternavn, telefon, epost) VALUES
-    (1, 'Inception', 3, 'John', 'Doe', '555123456', 'john.doe@mail.com'),
     (2, 'The Departed', 2, 'Emily', 'Smith', '555234567', 'emily.smith@mail.com'),
     (3, 'Pulp Fiction', 4, 'Jason', 'Nguyen', '555345678', 'jason.nguyen@mail.com'),
     (4, 'The Silence of the Lambs', 1, 'Sarah', 'Jackson', '555456789', 'sarah.jackson@mail.com'),

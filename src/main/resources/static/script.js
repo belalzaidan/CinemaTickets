@@ -1,12 +1,12 @@
 
 function bilett() {
 
-    film = $('#films').val(),
-        antall = $('#antall').val(),
-        fornavn = $('#fornavn').val(),
-        etternavn = $('#etternavn').val(),
-        telefon = $('#telefon').val(),
-        epost = $('#email').val()
+    film = $('#films').val()
+    antall = $('#antall').val()
+    fornavn = $('#fornavn').val()
+    etternavn = $('#etternavn').val()
+    telefon = $('#telefon').val()
+    epost = $('#email').val()
 
 
     isValid = true;
@@ -102,8 +102,7 @@ function hentBilett(skipifstatement) {
             break;
         default:
             dsort = "/hentAlle/0";
-            console.log("Error has occured: " + sort); break;
-
+            console.log("Error has occured: " + sort);
     }
 
     $.get(dsort, function (data) {
@@ -117,7 +116,7 @@ function hentBilett(skipifstatement) {
             return;
         }
 
-        var ut = "<h1>Besitlte biletter</h1>" +
+        var ut = "<h1>Bestilte biletter</h1>" +
             "<table class='table table-borderless' id='tickets'>" +
             "<tr>" +
             "<th> Valgt film </th>" +
@@ -135,20 +134,18 @@ function hentBilett(skipifstatement) {
                 "<td>" + alleBiletter[i].fornavn + " " + alleBiletter[i].etternavn + "</td>" +
                 "<td>" + alleBiletter[i].telefon + "</td>" +
                 "<td>" + alleBiletter[i].epost + "</td>" +
-                "<td><button onclick='slettBilett(" + alleBiletter[i].id + ")'><i id=slett class=\"fas fa-trash\"></i></button></td>" + // Call deleteTicket() with the ticket ID
+                "<td><button onclick='slettBilett(" + alleBiletter[i].id + ")'><i id=slett class=\"fas fa-trash\"></i></button></td>" +
                 "</tr>";
         }
 
         ut += "</table>" +
-            '<div class="buttons"><button class="btn btn-danger" onClick="slettAlle()"> Slett alle bilettene </button></div>';
+            "<div class='buttons'><button class='btn btn-danger' onclick='slettAlle()'> Slett alle bilettene </button></div>";
         $('#result').html(ut);
         if (alleBiletter.length === 0) {
             $("#result").html("");
         }
     });
 }
-
-
 
 function slettBilett(ticketId){
     $("#result").html("");

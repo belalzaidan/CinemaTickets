@@ -40,45 +40,6 @@ public class ApplicationController {
         return result;
     }
 
-
-/*    @GetMapping("/hentFilm")
-    @ResponseBody
-    public List<Bilett> hentFilm() {
-        return rep.findByOrderByFilmAsc();
-    }
-
-    @GetMapping("/hentAntall")
-    @ResponseBody
-    public List<Bilett> hentAntall() {
-        return rep.findByOrderByAntallAsc();
-    }
-
-    @GetMapping("/hentFornavn")
-    @ResponseBody
-    public List<Bilett> hentFornavn() {
-        return rep.findByOrderByFornavnAsc();
-    }
-
-    @GetMapping("/hentEtternavn")
-    @ResponseBody
-    public List<Bilett> hentEtternavn() {
-        return rep.findByOrderByEtternavnAsc();
-    }
-
-    @GetMapping("/hentTelefon")
-    @ResponseBody
-    public List<Bilett> hentTelefon() {
-        return rep.findByOrderByTelefonAsc();
-    }
-
-    @GetMapping("/hentEpost")
-    @ResponseBody
-    public List<Bilett> hentEpost() {
-        return rep.findByOrderByEpostAsc();
-    }
-
- */
-
     @GetMapping("/slettBilett/{ticketId}")
     private void slettBillett(@PathVariable int ticketId) {
         for(Bilett i : rep.findAll()){

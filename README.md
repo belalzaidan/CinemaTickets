@@ -19,6 +19,7 @@ som gir deg muligheten til å slette alle bilettene med en gang.
 NB! Det finnes en tekstfil (objects.txt) under resources som inneholder en kommand
 som du kan bruke for å legge raskt noen objekter i databasen.
 
+Youtube lenke: https://youtu.be/WqQCUncApo4
 
 
 
