@@ -3,6 +3,7 @@ package com.example.oblig3repo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -19,7 +20,7 @@ public class ApplicationController {
     @GetMapping("/hentAlle/{sortId}")
     @ResponseBody
     public List<Bilett> hentAlle(@PathVariable int sortId) {
-        List<Bilett> result = null;
+        List<Bilett> result = new ArrayList<>();
         switch (sortId) {
             case 0:
                 result = rep.findAll();
@@ -44,7 +45,6 @@ public class ApplicationController {
     private void slettBillett(@PathVariable int ticketId) {
         for(Bilett i : rep.findAll()){
             if(i.getId() == ticketId){
-
                 rep.delete(i);
                 break;
             }

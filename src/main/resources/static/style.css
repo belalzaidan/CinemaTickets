@@ -7,6 +7,9 @@ button{
     background: rgba(117, 117, 117, 0);
     border: 0;
 }
+.hidden{
+    display: none;
+}
 .table{
     background-color: rgba(92, 107, 113, 0.5);
     backdrop-filter: blur(7px);
@@ -36,7 +39,7 @@ tr{
 .card{
     border-radius: 10px;
     border: 1px solid #757575;
-    max-width: 700px;
+    max-width: 800px;
     margin: auto;
     padding: 20px;
     background-color: rgba(92, 107, 113, 0.5);
@@ -85,6 +88,15 @@ input[type="text"], input[type="number"]{
     color: white;
 }
 #slett{
+    color: #ff2727;
+}
+.slettBtn{
+    color: #ff2727;
+}
+.bekreftBtn{
+    color: #34b809;
+}
+.avbrytBtn{
     color: #ff2727;
 }
 #order{
